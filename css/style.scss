@@ -1,0 +1,130 @@
+// ヘッダー
+.header{
+  padding: 0 40px;
+  display: flex;
+  .header_left{
+    max-width: 154px;
+    margin-top: 23px;
+    a{
+      display: inline-block;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .header_right{
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+    .hunburger_menu{
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 0;
+      z-index: 3;
+      cursor: pointer;
+      span{
+        position: absolute;
+        display: inline-block;
+        background: black;
+        width: 100%;
+        height: 2px;
+      }
+      span:nth-child(1){
+        top: 2px;
+        transition: .5s;
+      }
+      span:nth-child(2){
+        top: 11px;
+        transition: .5s;
+      }
+      span:nth-child(3){
+        top: 21px;
+        transition: .5s;
+      }
+    }
+    .open span:nth-child(1){
+      transform: translateY(8px) rotate(405deg);
+      transition: .5s;
+      background: white;
+    }
+    .open span:nth-child(2){
+      opacity: 0;
+      transition: .5s;
+      background: white;
+    }
+    .open span:nth-child(3){
+      transform: translateY(-11px) rotate(-405deg);
+      transition: .5s;
+      background: white;
+    }
+  }
+  .nav_menu{
+    left: 0;
+    width: 300px;
+    background: #121212;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    z-index: 4;
+    padding: 60px 25px;
+    color: white;
+    font-size: 0.875rem;
+    opacity: 0;
+    transform: translateX(-500px);
+    transition: .5s;
+    .nav_menu_top{
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 60px;
+      a{
+        position: relative;
+        margin: 0;
+        padding: 20px 0;
+        border-bottom: solid 1px #fff;
+        transition: .5s;
+        &:hover{
+          transition: .5s;
+          transform: scale(1.1);
+        }
+      }
+    }
+    .nav_menu_bottom{
+      display: flex;
+      flex-direction: column;
+      a{
+        padding: 10px 0;
+      }
+    }
+  }
+}
+
+.open_header .nav_menu{
+  opacity: 1;
+  transform: translateX(0px);
+  transition: .5s;
+}
+
+.mask_menu{
+  position: absolute;
+  background: black;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 2;
+}
+
+.open_mask{
+  opacity: 0.8;
+}
+
+// ビデオ
+.video_main{
+  margin-top: 20px;
+  margin-bottom: 100px;
+  .video{
+    width: 100%;
+  }
+}

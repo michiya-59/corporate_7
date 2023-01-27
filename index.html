@@ -9,10 +9,47 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&amp;family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/00e4001a9c.js" crossorigin="anonymous"></script>
-  <script src="js/script.js"></script>
+  <script src="js/hamburger.js"></script>
+  <script src="js/video_resize.js"></script>
   <title></title>
 </head>
 <body>
-  
+  <!-- ヘッダー -->
+  <header>
+    <div class="header" id="header">
+      <div class="header_left">
+        <a href="">
+          <img src="image/logo.svg" alt="">
+        </a>
+      </div>
+      <div class="header_right">
+        <div class="hunburger_menu" id="hunburger_menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="nav_menu" id="nav_menu">
+        <div class="nav_menu_top" >
+          <a href="#pickup">PICK UP</a>
+          <a href="#feature">FEATURE</a>
+          <a href="#contact">CONTACT</a>
+        </div>
+        <div class="nav_menu_bottom">
+          <a href="">Twitter</a>
+          <a href="">Facebook</a>
+          <a href="">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="mask_menu" id="mask_menu">
+    </div>
+  </header>
+  <main>
+    <!-- ビデオ -->
+    <div class="video_main">
+      <video src="movie/video-[onlinevideoconverter.com].mp4" class="video" id="video" autoplay muted loop playsinline></video>
+    </div>
+  </main>
 </body>
 </html>
