@@ -1,3 +1,13 @@
+@mixin media{
+  @media screen and (max-width: 900px) {
+    @content
+  }
+}
+
+body{
+  font-family: 'Montserrat','Zen Maru Gothic', sans-serif;
+}
+
 // ヘッダー
 .header{
   padding: 0 40px;
@@ -128,3 +138,113 @@
     width: 100%;
   }
 }
+
+// PICK UP
+.pick_up{
+  margin-bottom: 100px;
+  h1{
+    text-align: center;
+    font-size: 2.254rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+} 
+.slider_img_content{
+  padding: 0;
+  position: relative;
+}
+.slider_img_content .prev{
+  color: #ffffff;
+  font-size: 25px;
+  position: absolute;
+  z-index: 2;
+  top: 108px;
+  left: 27px;
+  opacity: 0.8;
+  @include media{
+    top: 72px;
+    left: 64px;
+  }
+}
+.slider_img_content .next{
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  z-index: 2;
+  opacity: 0.8;
+  left: 1388px;
+  bottom: 94px;
+  @include media{
+    bottom: 57px;
+    right: 44px;
+  }
+}
+.slider_img_content div{
+  padding: 0 30px 0 10px;
+}
+.slider_img_content img{
+  width: 100%;
+}
+.slider_img_content .slick-next{
+  right: 17px;
+  z-index: 100;
+}
+.slider_img_content .slick-prev{
+  left: 23px;
+  z-index: 100;
+}
+
+// FETAURE
+.feature{
+  margin-bottom: 100px;
+  h1{
+    text-align: center;
+    font-size: 2.254rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  .feature_content{
+    width: 1208px;
+    height: 1535px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    a{
+      display: inline-block;
+      width: 32%;
+      height: 491px;
+      .feature_content_part{
+        width: 100%;
+        height: 100%;
+        border: 1px solid lightgray;
+        box-shadow: 4px 5px 10px lightgrey;
+        .feature_content_part_top{
+          height: 257px;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .feature_content_part_bottom{
+          padding: 25px;
+          p{
+            margin-bottom: 7px;
+          }
+          p:nth-child(2){
+            margin-bottom: 15px;
+          }
+          p:nth-child(3){
+            margin-bottom: 15px;
+          }
+          p:nth-child(4){
+            text-align: right;
+            margin: 0;
+          }
+        }
+
+      }
+    }
+  }
+} 
