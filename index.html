@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/destyle.css">
+  <link rel="stylesheet" href="css/destyle.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="https://www.jungleocean.com/demo/jquery-slick/css/slick-theme.css"/>
   <link rel="stylesheet" type="text/css" href="https://www.jungleocean.com/demo/jquery-slick/css/slick.css"/>
@@ -15,8 +15,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&amp;family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/00e4001a9c.js" crossorigin="anonymous"></script>
   <script src="js/hamburger.js"></script>
-  <script src="js/video_resize.js"></script>
   <script src="js/slider.js"></script>
+  <script src="js/video_resize.js"></script>
   <script src="js/scroll_top.js"></script>
   <title></title>
 </head>
@@ -54,9 +54,9 @@
   </header>
   <main>
     <!-- ビデオ -->
-    <section class="video_main">
-      <video src="movie/video-[onlinevideoconverter.com].mp4" class="video" id="video" autoplay muted loop playsinline></video>
-    </section>
+    <div id="video">
+      <video id="bg-video" src="movie/video-[onlinevideoconverter.com].mp4" loop autoplay muted playsinline></video>
+    </div>
     <!-- PICK UP -->
     <section class="pick_up">
       <h1>PICK UP</h1>
@@ -198,6 +198,7 @@
       </div>
     </section>
   </main>
+  <!-- FOOTER -->
   <footer>
     <div class="footer" id="footer">
       <h1>CONTACT</h1>

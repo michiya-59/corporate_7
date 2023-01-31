@@ -10,11 +10,22 @@ body{
 
 // ヘッダー
 .header{
-  padding: 0 40px;
   display: flex;
+  position: sticky;
+  z-index: 999;
+  padding: 0 40px;
+  width: 100%;
+  background: white;
+  height: 80px;
+  @include media{
+    padding: 0 16px;
+  }
   .header_left{
     max-width: 154px;
     margin-top: 23px;
+    @include media{
+      width: 74%;
+    }
     a{
       display: inline-block;
       img{
@@ -130,18 +141,21 @@ body{
   opacity: 0.8;
 }
 
-// ビデオ
-.video_main{
-  margin-top: 20px;
+#bg-video {
+  width: 100%;
   margin-bottom: 100px;
-  .video{
+  @include media{
     width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    margin-bottom: 70px;
   }
 }
 
 // PICK UP
 .pick_up{
   margin-bottom: 100px;
+  overflow: hidden;
   h1{
     text-align: center;
     font-size: 2.254rem;
@@ -152,6 +166,9 @@ body{
 .slider_img_content{
   padding: 0;
   position: relative;
+  @include media{
+    height: inherit;
+  }
 }
 .slider_img_content .prev{
   color: #ffffff;
@@ -162,8 +179,8 @@ body{
   left: 27px;
   opacity: 0.8;
   @include media{
-    top: 72px;
-    left: 64px;
+    top: 60px;
+    left: 11px;
   }
 }
 .slider_img_content .next{
@@ -175,12 +192,23 @@ body{
   left: 1388px;
   bottom: 94px;
   @include media{
-    bottom: 57px;
-    right: 44px;
+    left: 90%;
+    bottom: 65px;
+    right: 0;
   }
 }
+
+.slider{
+  @include media{
+    height: 156px;
+  }
+}
+
 .slider_img_content .slider_img_content_part{
   padding: 0 30px 0 10px;
+  @include media{
+    padding: 0 20px;
+  }
 }
 .slider_img_content img{
   width: 100%;
@@ -197,6 +225,7 @@ body{
 // FETAURE
 .feature{
   margin-bottom: 100px;
+  width: 100%;
   h1{
     text-align: center;
     font-size: 2.254rem;
@@ -211,10 +240,20 @@ body{
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
+    @include media{
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      padding: 0 16px;
+    }
     a{
       display: inline-block;
       width: 32%;
       height: 491px;
+      @include media{
+        width: 100%;
+        margin-bottom: 26px;
+      }
       .feature_content_part{
         width: 100%;
         height: 100%;
@@ -257,17 +296,32 @@ footer{
     width: 1240px;
     margin: 0 auto;
     padding: 30px 23px 80px 23px;
+    @include media{
+      width: 100%;
+      padding-top: 60px;
+    }
     h1{
       text-align: center;
       font-size: 2rem;
       font-weight: bold;
+      @include media{
+        font-size: 1rem;
+      }
     }
     .contact_content{
       display: flex;
       padding-top: 30px;
+      @include media{
+        flex-direction: column;
+        padding-top: 50px;
+      }
       .contact_left{
         width: 59%;
         border-right: 0.5px solid #ffffff7a;
+        @include media{
+          width: 100%;
+          border: none;
+        }
         .contact_left_top, .contact_left_midle{
           margin-bottom: 22px;
         }
@@ -278,6 +332,11 @@ footer{
           font-weight: bold;
           border-radius: 5px;
           margin: 35px auto;
+          @include media{
+            width: 100%;
+            padding: 16px 29px;
+            margin: 30px 0;
+          }
         }
         .contact_left_bottom h1{
           text-align: left;
@@ -289,6 +348,11 @@ footer{
       .contact_right{
         width: 60%;
         padding: 10px 0px 0 76px;
+        @include media{
+          width: 100%;
+          padding: 0;
+          margin-top: 50px;
+        }
         form{
           display: flex;
           flex-direction: column;
@@ -312,6 +376,9 @@ footer{
             padding: 10px 0;
             position: relative;
             overflow: hidden;
+            @include media{
+              margin: 0 auto;
+            }
             &::before{
               content: 'SEND';
               position: absolute;
@@ -342,9 +409,15 @@ footer{
     font-size: 1.125rem;
     margin-bottom: 6px;
     display: block;
+    @include media{
+      font-size: 1rem;
+    }
   }
   p{
     font-size: 0.875rem;
+    @include media{
+      font-size: 0.8rem;
+    }
   }
   .copyright{
     text-align: center;
