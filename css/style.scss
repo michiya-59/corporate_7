@@ -11,8 +11,8 @@ body{
 // ヘッダー
 .header{
   display: flex;
-  position: sticky;
-  z-index: 999;
+  position: fixed;
+  z-index: 5;
   padding: 0 40px;
   width: 100%;
   background: white;
@@ -118,27 +118,28 @@ body{
       }
     }
   }
-}
-
-.open_header .nav_menu{
-  opacity: 1;
-  transform: translateX(0px);
-  transition: .5s;
-}
-
-.mask_menu{
-  position: absolute;
-  background: black;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  opacity: 0;
-  z-index: 2;
-}
-
-.open_mask{
-  opacity: 0.8;
+  
+  .opan_nav_menu{
+    opacity: 1;
+    transform: translateX(0px);
+    transition: .5s;
+    z-index: 6;
+  }
+  
+  .mask_menu{
+    position: fixed;
+    background: black;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 2;
+  }
+  
+  .open_mask{
+    opacity: 0.8;
+  }
 }
 
 #bg-video {

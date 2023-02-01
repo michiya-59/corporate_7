@@ -6,8 +6,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: sticky;
-  z-index: 999;
+  position: fixed;
+  z-index: 5;
   padding: 0 40px;
   width: 100%;
   background: white;
@@ -141,17 +141,16 @@ body {
 .header .nav_menu .nav_menu_bottom a {
   padding: 10px 0;
 }
-
-.open_header .nav_menu {
+.header .opan_nav_menu {
   opacity: 1;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  z-index: 6;
 }
-
-.mask_menu {
-  position: absolute;
+.header .mask_menu {
+  position: fixed;
   background: black;
   top: 0;
   bottom: 0;
@@ -160,8 +159,7 @@ body {
   opacity: 0;
   z-index: 2;
 }
-
-.open_mask {
+.header .open_mask {
   opacity: 0.8;
 }
 
