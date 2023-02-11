@@ -3,8 +3,6 @@ body {
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: fixed;
   z-index: 5;
@@ -55,36 +53,28 @@ body {
 }
 .header .header_right .hunburger_menu span:nth-child(1) {
   top: 2px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .header .header_right .hunburger_menu span:nth-child(2) {
   top: 11px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .header .header_right .hunburger_menu span:nth-child(3) {
   top: 21px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .header .header_right .open span:nth-child(1) {
-  -webkit-transform: translateY(8px) rotate(405deg);
-          transform: translateY(8px) rotate(405deg);
-  -webkit-transition: 0.5s;
+  transform: translateY(8px) rotate(405deg);
   transition: 0.5s;
   background: white;
 }
 .header .header_right .open span:nth-child(2) {
   opacity: 0;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   background: white;
 }
 .header .header_right .open span:nth-child(3) {
-  -webkit-transform: translateY(-11px) rotate(-405deg);
-          transform: translateY(-11px) rotate(-405deg);
-  -webkit-transition: 0.5s;
+  transform: translateY(-11px) rotate(-405deg);
   transition: 0.5s;
   background: white;
 }
@@ -100,19 +90,12 @@ body {
   color: white;
   font-size: 0.875rem;
   opacity: 0;
-  -webkit-transform: translateX(-500px);
-          transform: translateX(-500px);
-  -webkit-transition: 0.5s;
+  transform: translateX(-500px);
   transition: 0.5s;
 }
 .header .nav_menu .nav_menu_top {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-bottom: 60px;
 }
 .header .nav_menu .nav_menu_top a {
@@ -120,32 +103,22 @@ body {
   margin: 0;
   padding: 20px 0;
   border-bottom: solid 1px #fff;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 .header .nav_menu .nav_menu_top a:hover {
-  -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 .header .nav_menu .nav_menu_bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 .header .nav_menu .nav_menu_bottom a {
   padding: 10px 0;
 }
 .header .opan_nav_menu {
   opacity: 1;
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-  -webkit-transition: 0.5s;
+  transform: translateX(0px);
   transition: 0.5s;
   z-index: 6;
 }
@@ -157,10 +130,12 @@ body {
   right: 0;
   left: 0;
   opacity: 0;
+  pointer-events: none;
   z-index: 2;
 }
 .header .open_mask {
   opacity: 0.8;
+  pointer-events: visible;
 }
 
 #bg-video {
@@ -171,8 +146,7 @@ body {
   #bg-video {
     width: 100%;
     height: 100vh;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     margin-bottom: 70px;
   }
 }
@@ -274,25 +248,16 @@ body {
   width: 1208px;
   height: 1535px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
 }
 @media screen and (max-width: 900px) {
   .feature .feature_content {
     width: 100%;
     height: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     padding: 0 16px;
   }
 }
@@ -311,8 +276,7 @@ body {
   width: 100%;
   height: 100%;
   border: 1px solid lightgray;
-  -webkit-box-shadow: 4px 5px 10px lightgrey;
-          box-shadow: 4px 5px 10px lightgrey;
+  box-shadow: 4px 5px 10px lightgrey;
 }
 .feature .feature_content a .feature_content_part .feature_content_part_top {
   height: 257px;
@@ -320,6 +284,14 @@ body {
 .feature .feature_content a .feature_content_part .feature_content_part_top img {
   width: 100%;
   height: 100%;
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: 1s;
+}
+.feature .feature_content a .feature_content_part .feature_content_part_top img.active {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: 1s;
 }
 .feature .feature_content a .feature_content_part .feature_content_part_bottom {
   padding: 25px;
@@ -364,17 +336,12 @@ footer .footer h1 {
   }
 }
 footer .footer .contact_content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-top: 30px;
 }
 @media screen and (max-width: 900px) {
   footer .footer .contact_content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     padding-top: 50px;
   }
 }
@@ -424,13 +391,8 @@ footer .footer .contact_content .contact_right {
   }
 }
 footer .footer .contact_content .contact_right form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: white;
 }
 footer .footer .contact_content .contact_right form label {
@@ -471,16 +433,12 @@ footer .footer .contact_content .contact_right form .submit::before {
   color: rgba(0, 0, 0, 0.8901960784);
   pointer-events: none;
   padding-top: 10px;
-  -webkit-transition: 0.7s;
   transition: 0.7s;
-  -webkit-transform: translateX(-300px);
-          transform: translateX(-300px);
+  transform: translateX(-300px);
 }
 footer .footer .contact_content .contact_right form .submit:hover::before {
   opacity: 1;
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
-  -webkit-transition: 0.7s;
+  transform: translateX(0px);
   transition: 0.7s;
 }
 footer strong {
@@ -509,7 +467,6 @@ footer .copyright {
 
 #scroll_to_top_btn {
   opacity: 0;
-  -webkit-transition: 1s;
   transition: 1s;
 }
 #scroll_to_top_btn .fa-solid {
